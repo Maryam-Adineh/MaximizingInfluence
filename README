@@ -1,0 +1,43 @@
+===============================================================================================
+===============================================================================================
+===                                                                                         ===
+===     Implementation of Influence maximization algorithms proposed in the bellow paper:   ===
+===                                                                                         ===
+===     Maximizing the Influence: Analytic Activation Probability Computation Approach      ===
+===      link: https://arxiv.org/abs/2012.02837                                             ===
+===                                                                                         ===
+===============================================================================================
+===============================================================================================
+
+To compile:
+	make InfluenceMaximization
+	
+To execute:
+	./InfluenceMaximization <AAPC|EAPC> <dataset> <d|u> <p> <k> <R>
+	
+	<AAPC|EAPC>
+		Algorithm name introduced in the paper.
+	<dataset>
+		Path of dataset file. An example of file format is described in the following.	
+	<d|u>
+		'd' for directed graph file and 'u' for undirected.
+	<p>
+		Propagation probability of IC model. A number in [0,1].
+	<k>
+		Size of the seed set.
+	<R>
+		Number of simulations to calculate influnce spread.
+		
+example:
+	./InfluenceMaximization remove graph.txt d 0.01 2 1000
+
+graph.txt:
+5 10  => #n #m: Number of vertices and edges
+0 1  \
+0 2   \
+1 3    => #m line of edges(source target)
+. .   /
+. .  /
+
+output:
+	Three files will be created for selected seeds, execution time and influence spread.
