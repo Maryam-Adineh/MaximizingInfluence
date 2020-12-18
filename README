@@ -29,7 +29,7 @@ To execute:
 		Number of simulations to calculate influnce spread.
 		
 example:
-	./InfluenceMaximization remove graph.txt d 0.01 2 1000
+	./InfluenceMaximization EAPC graph.txt d 0.01 2 1000
 
 graph.txt:
 5 10  => #n #m: Number of vertices and edges
@@ -40,4 +40,5 @@ graph.txt:
 . .  /
 
 output:
-	Three files will be created for selected seeds, execution time and influence spread.
+	Three files will be created. First one containes the selected seeds, second file
+	records the execution time and the third one contains the influence spread.
